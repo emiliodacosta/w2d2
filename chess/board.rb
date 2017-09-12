@@ -68,9 +68,9 @@ end
 
 
 a = Board.new
-p a.in_bounds?([0,0])
-p a.in_bounds?([9,9])
-p @cursor_pos
+# p a.in_bounds?([0,0])
+# p a.in_bounds?([9,9])
+
 # puts
 # p a[[1,2]]
 # puts

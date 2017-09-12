@@ -3,10 +3,11 @@ require 'singleton'
 class Piece
 
   attr_accessor :color
+  attr_reader :display
 
   def initialize(color)
     @color = color
-
+    @display = "\u2654"
   end
 
   def to_s(type)
