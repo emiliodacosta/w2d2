@@ -18,7 +18,7 @@ class Board
     black_rows = Array.new(2){Array.new(8)}
     black_rows.each_index do |i|
       black_rows[i].each_index do |j|
-        black_rows[i][j] = Piece.new(:black)
+        black_rows[i][j] = Piece.new(:black, self)
       end
     end
     empty_rows = Array.new(4){Array.new(8)}
@@ -30,7 +30,7 @@ class Board
     white_rows = Array.new(2){Array.new(8)}
     white_rows.each_index do |i|
       white_rows[i].each_index do |j|
-        white_rows[i][j] = Piece.new(:white)
+        white_rows[i][j] = Piece.new(:white, self)
       end
     end
     grid.concat(black_rows + empty_rows + white_rows)
@@ -48,6 +48,8 @@ class Board
   end
 
   def move_piece(start_pos, end_pos)
+
+
 
     if self[start_pos].is_a?(NullPiece)
       raise BoardError.new ("There is no piece at #{start_pos}.")

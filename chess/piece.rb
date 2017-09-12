@@ -3,14 +3,14 @@ require 'singleton'
 class Piece
 
   attr_accessor :color
-  attr_reader :display
 
-  def initialize(color)
+
+  def initialize(color, board)
     @color = color
-    @display = "\u2654"
+    @board = board
   end
 
-  def to_s(type)
+  def to_s(symbol)
 
   end
 
@@ -26,9 +26,13 @@ class Piece
   end
 
   def symbol()
+
   end
 
   def valid_moves()
+    return false if self.color ==
+
+
   end
 
   def move_into_check(to_pos)

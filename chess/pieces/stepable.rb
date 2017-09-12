@@ -1,0 +1,4 @@
+module Walkable
+
+
+end

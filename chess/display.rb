@@ -56,7 +56,8 @@ end
 
 
 # .display.colorize(:black)
-
+#
+# king = "\u2654"
 #  TODO: COLORS ["This is blue"].colorize(:blue)
 #
 #         :black   => 0, :light_black    => 60,
