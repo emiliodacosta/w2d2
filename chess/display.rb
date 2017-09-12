@@ -15,16 +15,22 @@ class Display
 
   def render
 
-
+    puts "________________________"
     @board.grid.each.with_index do |row, idx|
-      puts "________________________"
+
       row.each.with_index do |sq, i|
         #debugger
+
         if @cursor.cursor_pos == [idx, i]
-          "E".colorize(:magenta)
+          print "|P|".colorize(sq.color).colorize( :background => :light_magenta)
+        elsif sq.color
+          print "|P|".colorize(sq.color)
+        else
+          print "|_|"
         end
-        print "|P|".colorize(sq.color) if sq.color
+
         puts if i == row.length-1
+
       end
     end
     puts "________________________"

@@ -14,6 +14,14 @@ class Piece
 
   end
 
+  def moves
+    options = []
+
+    #TODO write the rest of this
+
+    options
+  end
+
   def empty?()
   end
 
